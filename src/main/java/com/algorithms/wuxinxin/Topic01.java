@@ -16,7 +16,7 @@ public class Topic01 {
     private static final int number = 2;
 
     public static void main(String[] args) {
-        int[] numer = {2, 0, 0, 4};
+        int[] numer = {8,3,8,2,9,1};
 
         binarySearch(numer, 0, numer.length - 1);
 
@@ -55,24 +55,32 @@ public class Topic01 {
 
     public static void removeMinValue(int[] array, int index1, int index2) {
         if (index1 == index2) {
+            System.out.println("删除:"+array[index1]);
             array[index1] = -1;
+            return;
         }
 
         if (array[index1] > array[index2]) {
+            System.out.println("删除:"+array[index2]);
             array[index2] = -1;
         } else {
+            System.out.println("删除:"+array[index1]);
             array[index1] = -1;
         }
     }
 
     public static void removeMaxValue(int[] array, int index1, int index2) {
         if (index1 == index2) {
+            System.out.println("删除:"+array[index1]);
             array[index1] = -1;
+            return;
         }
 
         if (array[index1] > array[index2]) {
+            System.out.println("删除:"+array[index1]);
             array[index1] = -1;
         } else {
+            System.out.println("删除:"+array[index2]);
             array[index2] = -1;
         }
     }
