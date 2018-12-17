@@ -13,12 +13,13 @@ import java.util.Scanner;
 */
 public class Topic01 {
     /**
-     * 删除第index元素
-     * @param a
-     * @param index
-     * @param end
+     * 删除第index位置的元素
+     *
+     * @param a 原数组
+     * @param index 要删除的位置
+     * @param end 结尾的位置
      */
-    public static void deleteItem(int[] a, int index, int end){
+    private static void deleteItem(int[] a, int index, int end){
         int temp = a[index], i;
         for(i = index; i < end-1; i++){
             a[i] = a[i+1];
@@ -28,10 +29,11 @@ public class Topic01 {
 
     /**
      * 打印被删除后的结果
-     * @param a
-     * @param n
+     *
+     * @param a 原数组
+     * @param n 要打印的元素个数
      */
-    public static void printArr(int[] a, int n){
+    private static void printArr(int[] a, int n){
         for(int i = 0; i < n; i++){
             System.out.print(a[i]+" ");
         }
@@ -51,6 +53,7 @@ public class Topic01 {
         int m = in.nextInt();
         if (n == m){//当正整数的位数等于要删除的个数时，输出0
             System.out.println(0);
+            return;
         }
         //记录已删除的个数
         System.out.print("原数组：");
@@ -58,7 +61,7 @@ public class Topic01 {
         int count = 1;
         while(count <= m){
             System.out.printf("删除%d个数的结果：", count);
-            for(int i = 0; i < n; i++){
+            for(int i = 0; i < q; i++){
                 if(a[i] < a[i+1]){//假如前面的元素小于后面的，删除前面的元素
                     deleteItem(a, i, q);
                     q--;
