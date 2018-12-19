@@ -7,9 +7,9 @@ import java.util.Scanner;
  */
 /*
 测试数据
+7
+1 1 1 2 1 1 1
 6
-8 3 8 2 9 1
-5
 */
 public class Topic01 {
     /**
