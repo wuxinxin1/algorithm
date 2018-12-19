@@ -63,7 +63,8 @@ public class Topic01 {
             System.out.printf("删除%d个数的结果：", count);
             int i;
             for(i = 0; i < q; i++){
-                if(i==q-1 || a[i] < a[i+1]){//假如前面的元素小于后面的，删除前面的元素
+                if(i==q-1 || a[i] < a[i+1]){
+                    //假如前面的元素小于后面的，删除前面的元素,如果没有出现后面的元素大于前面的元素（说明该元素为最小值），就删除最后一个
                     deleteItem(a, i, q);
                     q--;
                     count++;
