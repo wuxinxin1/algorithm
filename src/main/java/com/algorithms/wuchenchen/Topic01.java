@@ -61,8 +61,9 @@ public class Topic01 {
         int count = 1;
         while(count <= m){
             System.out.printf("删除%d个数的结果：", count);
-            for(int i = 0; i < q; i++){
-                if(a[i] < a[i+1]){//假如前面的元素小于后面的，删除前面的元素
+            int i;
+            for(i = 0; i < q; i++){
+                if(i==q-1 || a[i] < a[i+1]){//假如前面的元素小于后面的，删除前面的元素
                     deleteItem(a, i, q);
                     q--;
                     count++;
