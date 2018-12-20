@@ -16,7 +16,7 @@ public class Topic01 {
     private static final int number = 2;
 
     public static void main(String[] args) {
-        int[] numer = {8,3,8,2,9,1};
+        int[] numer = {1,2,3,4,5};
 
         binarySearch(numer, 0, numer.length - 1);
 
